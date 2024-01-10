@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    color: white;
+    background-color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 0 4em;
+}
+
+@media screen and (max-width: 767px) {
+    .header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        margin: 10px 2em;
+    }
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.david {
+    z-index: 50;
+    position: relative;
+    padding: 0;
+    color: white;
+    margin-top: 2em;
+    text-align: center;
+    width: 20em;
+    height: 20em;
+    background-color: black;
+    border-radius: 24px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards 0.4s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 3);
+}
+
+.titleHeading {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 2);
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.david img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px !important;
+    width: 20em;
+    height: 20em;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.textShow {
+    margin-top: 2em;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards 0.4s;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 3);
+}
+
+.textShow2 {
+    padding: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards 0.4s;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 3);
+}
